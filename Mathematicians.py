@@ -5,7 +5,7 @@ class Mathematicians ():
     def __init__(self):
         self.__url = 'http://www.fabpedigree.com/james/mathmen.htm'
 
-    def get_names(self):
+    def list_names(self):
         parser = SimpleParser()
         response = parser.get(self.__url)
 
