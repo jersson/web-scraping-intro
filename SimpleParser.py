@@ -1,7 +1,6 @@
 from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
-from bs4 import BeautifulSoup
 
 class SimpleParser():
     def __log_error(self, err):
