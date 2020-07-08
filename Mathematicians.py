@@ -1,5 +1,6 @@
 from SimpleParser import SimpleParser
 from bs4 import BeautifulSoup
+from utils import *
 
 class Mathematicians ():
     def __init__(self):
@@ -9,9 +10,7 @@ class Mathematicians ():
         '''
         Return a mathematician names list from http://www.fabpedigree.com/james/mathmen.htm 
         '''
-
         result = None
-
         try:
             parser = SimpleParser()
             response = parser.get(self.__url)
@@ -25,6 +24,6 @@ class Mathematicians ():
                             names.add(name.strip())
                 result = list(names)
         except Exception as error:
-            print('Error: {}'.format(error))
+            log_error('Error: {}'.format(error))
         finally:
             return result

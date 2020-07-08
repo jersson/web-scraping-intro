@@ -1,14 +1,9 @@
 from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
+from utils import *
 
 class SimpleParser():
-    def __log_error(self, err):
-        '''
-        This logging function just print a formated error message
-        '''
-        print(err)
-
     def __is_valid_web_response(self, res):
         '''
         Returns True if the response seems to be HTML, False otherwise.
@@ -32,6 +27,6 @@ class SimpleParser():
                     result = response.content
 
         except RequestException as error:
-            self.__log_error('Error making web requests to {}: {}'.format(url, error))
+            log_error('Error making web requests to {}: {}'.format(url, error))
         finally:
             return result
