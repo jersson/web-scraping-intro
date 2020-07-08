@@ -9,14 +9,22 @@ class Mathematicians ():
         '''
         Return a mathematician names list from http://www.fabpedigree.com/james/mathmen.htm 
         '''
-        parser = SimpleParser()
-        response = parser.get(self.__url)
 
-        if response is not None:
-            html = BeautifulSoup(response, 'html.parser')
-            names = set()
-            for li in html.select('li'):
-                for name in li.text.split('\n'):
-                    if len(name) > 0:
-                        names.add(name.strip())
-            return list(names)
+        result = None
+
+        try:
+            parser = SimpleParser()
+            response = parser.get(self.__url)
+
+            if response is not None:
+                html = BeautifulSoup(response, 'html.parser')
+                names = set()
+                for li in html.select('li'):
+                    for name in li.text.split('\n'):
+                        if len(name) > 0:
+                            names.add(name.strip())
+                result = list(names)
+        except Exception as error:
+            print('Error: {}'.format(error))
+        finally:
+            return result
