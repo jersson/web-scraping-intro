@@ -6,6 +6,9 @@ class Mathematicians ():
         self.__url = 'http://www.fabpedigree.com/james/mathmen.htm'
 
     def list_names(self):
+        '''
+        Return a mathematician names list from http://www.fabpedigree.com/james/mathmen.htm 
+        '''
         parser = SimpleParser()
         response = parser.get(self.__url)
 
