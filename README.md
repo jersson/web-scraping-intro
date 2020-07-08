@@ -15,6 +15,12 @@ TBD
  $ pip install -r requirements.txt
 ```
 
+## How to run the example
+
+```
+ $ python program.py
+```
+
 ## How to test the code
 
 We are using `pytest` so maybe you'll need to [install it](https://docs.pytest.org/en/stable/getting-started.html)
@@ -24,7 +30,7 @@ If you already have it, you can run the `pytest` command
  $ pytest
 ```
 
-You'll see something like:
+You'll see something like this:
 
 ```
  ========================= test session starts =========================
