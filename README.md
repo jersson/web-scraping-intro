@@ -1,6 +1,6 @@
 # web-scraping-intro
 
-TBD
+Cool sample project about web scraping using python :innocent:
 
 ## Installation
 
@@ -18,7 +18,7 @@ TBD
 ## How to run the example
 
 ```
- $ python program.py
+ $ python src/program.py
 ```
 
 ## How to test the code
@@ -43,7 +43,7 @@ You'll see something like this:
  ========================== 2 passed in 1.49s ==========================
 ```
 
-## References (to be updated :innocent:)
+## References
 
 - https://realpython.com/python-web-scraping-practical-introduction/
 - https://www.w3schools.com/python/python_classes.asp
