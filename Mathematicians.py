@@ -10,7 +10,6 @@ class Mathematicians ():
         '''
         Return a mathematician names list from http://www.fabpedigree.com/james/mathmen.htm 
         '''
-        print(top)
         result = None
         try:
             parser = SimpleParser()
