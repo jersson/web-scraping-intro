@@ -6,10 +6,11 @@ class Mathematicians ():
     def __init__(self):
         self.__url = 'http://www.fabpedigree.com/james/mathmen.htm'
 
-    def list_names(self):
+    def list_names(self, top = 100):
         '''
         Return a mathematician names list from http://www.fabpedigree.com/james/mathmen.htm 
         '''
+        print(top)
         result = None
         try:
             parser = SimpleParser()
@@ -20,7 +21,7 @@ class Mathematicians ():
                 names = set()
                 for li in html.select('li'):
                     for name in li.text.split('\n'):
-                        if len(name) > 0:
+                        if (len(name) > 0 and len(names) < top):
                             names.add(name.strip())
                 result = list(names)
         except Exception as error:
