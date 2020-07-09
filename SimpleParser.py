@@ -1,10 +1,11 @@
 from requests import get
+from requests import Response
 from requests.exceptions import RequestException
 from contextlib import closing
 from utils import *
 
 class SimpleParser():
-    def __is_valid_web_response(self, res):
+    def __is_valid_web_response(self, res: Response):
         '''
         Returns True if the response seems to be HTML, False otherwise.
         '''
@@ -14,7 +15,7 @@ class SimpleParser():
                 and content_type is not None
                 and content_type.find('html') > -1)
 
-    def get(self, url):
+    def request(self, url: str) -> Response:
         '''
         Attempts to get the content at `url` by making an HTTP GET request.
         If the content-type of response is some kind of HTML/XML, return the

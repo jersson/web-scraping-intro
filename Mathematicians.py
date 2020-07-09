@@ -14,7 +14,7 @@ class Mathematicians ():
         result = None
         try:
             parser = SimpleParser()
-            response = parser.get(self.__url)
+            response = parser.request(self.__url)
 
             if response is not None:
                 html = BeautifulSoup(response, 'html.parser')
