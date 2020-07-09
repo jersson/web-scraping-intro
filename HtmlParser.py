@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from contextlib import closing
 from utils import *
 
-class SimpleParser():
+class HtmlParser():
     def __is_valid_web_response(self, res: Response) -> bool:
         '''
         Returns True if the response seems to be HTML, False otherwise.

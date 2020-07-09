@@ -1,4 +1,4 @@
-from SimpleParser import SimpleParser
+from HtmlParser import HtmlParser
 from utils import *
 
 class Mathematicians ():
@@ -11,7 +11,7 @@ class Mathematicians ():
         '''
         result = None
         try:
-            parser = SimpleParser()
+            parser = HtmlParser()
             html = parser.request(self.__url)
 
             if html is not None:
