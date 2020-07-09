@@ -21,7 +21,7 @@ Cool sample project about web scraping using python :innocent:
  $ python src/program.py
 ```
 
-## How to test the code
+## How to test the code (it's working)
 
 We are using `pytest` so maybe you'll need to [install it](https://docs.pytest.org/en/stable/getting-started.html)
 If you already have it, you can run the `pytest` command
