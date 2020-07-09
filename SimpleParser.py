@@ -5,7 +5,7 @@ from contextlib import closing
 from utils import *
 
 class SimpleParser():
-    def __is_valid_web_response(self, res: Response):
+    def __is_valid_web_response(self, res: Response) -> bool:
         '''
         Returns True if the response seems to be HTML, False otherwise.
         '''

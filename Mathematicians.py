@@ -6,7 +6,7 @@ class Mathematicians ():
     def __init__(self):
         self.__url = 'http://www.fabpedigree.com/james/mathmen.htm'
 
-    def list_names(self, top = 100):
+    def list_names(self, top = 100) -> list:
         '''
         Return a mathematician names list from http://www.fabpedigree.com/james/mathmen.htm 
         '''
