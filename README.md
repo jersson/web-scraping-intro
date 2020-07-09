@@ -18,7 +18,7 @@ Cool sample project about web scraping using python :innocent:
 ## How to run the example
 
 ```
- $ python src/program.py
+ $ python program.py
 ```
 
 ## How to test the code
