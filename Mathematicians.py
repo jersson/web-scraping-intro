@@ -17,12 +17,14 @@ class Mathematicians ():
 
             if response is not None:
                 html = BeautifulSoup(response, 'html.parser')
-                names = set()
+                names = list()
                 for li in html.select('li'):
-                    for name in li.text.split('\n'):
-                        if (len(name) > 0 and len(names) < top):
-                            names.add(name.strip())
-                result = list(names)
+                    html_list_names = li.text.split('\n')
+                    if len(html_list_names) == 6:
+                        for name in html_list_names:
+                            if (len(name) > 0 and len(names) < top):
+                                names.append(name.strip())
+                result =  names
         except Exception as error:
             log_error('Error: {}'.format(error))
         finally:
