@@ -1,5 +1,4 @@
 from SimpleParser import SimpleParser
-from bs4 import BeautifulSoup
 from utils import *
 
 class Mathematicians ():
@@ -13,10 +12,9 @@ class Mathematicians ():
         result = None
         try:
             parser = SimpleParser()
-            response = parser.request(self.__url)
+            html = parser.request(self.__url)
 
-            if response is not None:
-                html = BeautifulSoup(response, 'html.parser')
+            if html is not None:
                 names = list()
                 for li in html.select('li'):
                     html_list_names = li.text.split('\n')

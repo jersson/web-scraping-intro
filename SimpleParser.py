@@ -1,6 +1,7 @@
 from requests import get
 from requests import Response
 from requests.exceptions import RequestException
+from bs4 import BeautifulSoup
 from contextlib import closing
 from utils import *
 
@@ -15,7 +16,7 @@ class SimpleParser():
                 and content_type is not None
                 and content_type.find('html') > -1)
 
-    def request(self, url: str) -> Response:
+    def request(self, url: str) -> BeautifulSoup:
         '''
         Attempts to get the content at `url` by making an HTTP GET request.
         If the content-type of response is some kind of HTML/XML, return the
@@ -25,7 +26,7 @@ class SimpleParser():
             result = None
             with closing(get(url, stream=True)) as response:
                 if self.__is_valid_web_response(response):
-                    result = response.content
+                    result = BeautifulSoup(response.content, 'html.parser')
 
         except RequestException as error:
             log_error('Error making web requests to {}: {}'.format(url, error))
