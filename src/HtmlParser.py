@@ -3,7 +3,7 @@ from requests import Response
 from requests.exceptions import RequestException
 from bs4 import BeautifulSoup
 from contextlib import closing
-from utils import *
+from .utils import log_error
 
 class HtmlParser():
     def __is_valid_web_response(self, res: Response) -> bool:

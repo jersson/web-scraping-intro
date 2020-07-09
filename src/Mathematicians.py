@@ -1,5 +1,6 @@
-from HtmlParser import HtmlParser
-from utils import *
+from .HtmlParser import HtmlParser
+from .utils import log_error
+# from src
 
 class Mathematicians ():
     def __init__(self):

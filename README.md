@@ -15,7 +15,7 @@ Cool sample project about web scraping using python :innocent:
  $ pip install -r requirements.txt
 ```
 
-## How to run the example
+## How to run the example (it's not working, needs to be checked)
 
 ```
  $ python src/program.py
@@ -52,3 +52,4 @@ You'll see something like this:
 - https://realpython.com/pytest-python-testing/
 - https://realpython.com/python-testing/
 - https://google.github.io/styleguide/pyguide.html
+- https://docs.python-guide.org/writing/structure/

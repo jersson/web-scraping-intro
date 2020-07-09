@@ -1,5 +1,5 @@
-from Mathematicians import Mathematicians
-
+from .context import src
+from src.Mathematicians import Mathematicians
 
 def test_get_names():
     mathematicians = Mathematicians()

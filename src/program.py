@@ -1,4 +1,4 @@
-from Mathematicians import Mathematicians
+from .Mathematicians import Mathematicians
 
 mathematicians = Mathematicians()
 names = mathematicians.list_names(10)

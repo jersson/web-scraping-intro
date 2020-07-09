@@ -1,4 +1,5 @@
-from HtmlParser import HtmlParser
+from .context import src
+from src.HtmlParser import HtmlParser
 
 def test_make_valid_request():
     url = 'https://realpython.com/python-web-scraping-practical-introduction/'
